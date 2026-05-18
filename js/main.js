@@ -1,6 +1,6 @@
 /* KGrace Photography — main.js */
 
-const PHOTO_PATH = 'instagram/photosbykgrace/';
+const PHOTO_PATH = 'assets/photosbykgrace/';
 
 const photos = [
   { file: 'graduation_01.jpg', cat: 'graduation', desc: 'A graduate in cap and gown poses for a portrait outdoors in front of historic campus buildings.' },
@@ -220,15 +220,6 @@ navLinks.querySelectorAll('a').forEach(a => {
     navLinks.classList.remove('open');
     navToggle.setAttribute('aria-expanded', false);
   });
-});
-
-/* ── Contact form ─────────────────────────── */
-document.getElementById('contactForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  btn.textContent = 'Message sent!';
-  btn.disabled = true;
-  setTimeout(() => { btn.textContent = 'Send Message'; btn.disabled = false; e.target.reset(); }, 3000);
 });
 
 /* ── Misc ─────────────────────────────────── */
