@@ -101,11 +101,12 @@ const photos = [
 ];
 
 /* ── Gallery ──────────────────────────────── */
-const grid        = document.getElementById('galleryGrid');
-const filterBtns  = document.querySelectorAll('.filter-btn');
-let   activeFilter = 'all';
-let   visiblePhotos = [];
-let   currentIndex  = 0;
+const grid       = document.getElementById('galleryGrid');
+const filterBtns = document.querySelectorAll('.filter-btn');
+const photoLimit = grid ? (parseInt(grid.dataset.limit) || Infinity) : Infinity;
+let activeFilter  = 'all';
+let visiblePhotos = [];
+let currentIndex  = 0;
 
 function buildGallery() {
   grid.innerHTML = '';
@@ -135,11 +136,17 @@ function applyFilter(filter) {
   activeFilter = filter;
   const items = grid.querySelectorAll('.gallery-item');
   visiblePhotos = [];
+  let shown = 0;
 
   items.forEach(item => {
     const match = filter === 'all' || item.dataset.cat === filter;
-    item.classList.toggle('hidden', !match);
-    if (match) visiblePhotos.push(parseInt(item.dataset.index));
+    const withinLimit = shown < photoLimit;
+    const visible = match && withinLimit;
+    item.classList.toggle('hidden', !visible);
+    if (visible) {
+      visiblePhotos.push(parseInt(item.dataset.index));
+      shown++;
+    }
   });
 }
 
@@ -177,24 +184,23 @@ function closeLightbox() {
   lbImg.src = '';
 }
 
-document.querySelector('.lb-close').addEventListener('click', closeLightbox);
-
-document.querySelector('.lb-prev').addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + visiblePhotos.length) % visiblePhotos.length;
-  showPhoto();
-});
-
-document.querySelector('.lb-next').addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % visiblePhotos.length;
-  showPhoto();
-});
-
-lightbox.addEventListener('click', e => {
-  if (e.target === lightbox) closeLightbox();
-});
+if (lightbox) {
+  document.querySelector('.lb-close').addEventListener('click', closeLightbox);
+  document.querySelector('.lb-prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + visiblePhotos.length) % visiblePhotos.length;
+    showPhoto();
+  });
+  document.querySelector('.lb-next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % visiblePhotos.length;
+    showPhoto();
+  });
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+}
 
 document.addEventListener('keydown', e => {
-  if (lightbox.hidden) return;
+  if (!lightbox || lightbox.hidden) return;
   if (e.key === 'Escape')      closeLightbox();
   if (e.key === 'ArrowLeft')  { currentIndex = (currentIndex - 1 + visiblePhotos.length) % visiblePhotos.length; showPhoto(); }
   if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % visiblePhotos.length; showPhoto(); }
@@ -225,8 +231,11 @@ navLinks.querySelectorAll('a').forEach(a => {
 /* ── Misc ─────────────────────────────────── */
 document.getElementById('year').textContent = new Date().getFullYear();
 
-setTimeout(() => document.getElementById('hero').classList.add('loaded'), 100);
+const heroEl = document.getElementById('hero');
+if (heroEl) setTimeout(() => heroEl.classList.add('loaded'), 100);
 
-/* Init */
-buildGallery();
-applyFilter('all');
+/* Init — only on portfolio page */
+if (grid) {
+  buildGallery();
+  applyFilter('all');
+}
