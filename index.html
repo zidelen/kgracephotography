@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KGrace Photography | San Antonio, TX</title>
+  <meta name="description" content="KGrace Photography — capturing life's most meaningful moments in San Antonio, TX and surrounding areas. Specializing in graduation, portraits, family, maternity, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">KGrace <span>Photography</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#gallery">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://www.instagram.com/photosbykgrace" target="_blank" rel="noopener" class="nav-ig">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            @photosbykgrace
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-img" style="background-image: url('instagram/photosbykgrace/family_01.jpg')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">San Antonio, TX &amp; Surrounding Areas</p>
+      <h1>Every moment<br><em>tells a story.</em></h1>
+      <p class="hero-sub">Photography that captures the real, the raw, and the beautiful.</p>
+      <div class="hero-cta">
+        <a href="#gallery" class="btn btn-light">View Portfolio</a>
+        <a href="#contact" class="btn btn-outline-light">Book a Session</a>
+      </div>
+    </div>
+    <a href="#gallery" class="scroll-hint" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="section-header">
+      <p class="eyebrow">Portfolio</p>
+      <h2>A Few Favorites</h2>
+    </div>
+
+    <div class="filter-bar" role="group" aria-label="Filter gallery">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="graduation">Graduation</button>
+      <button class="filter-btn" data-filter="portrait">Portraits</button>
+      <button class="filter-btn" data-filter="family">Family</button>
+      <button class="filter-btn" data-filter="maternity">Maternity</button>
+      <button class="filter-btn" data-filter="children-kids">Kids</button>
+      <button class="filter-btn" data-filter="newborn-baby">Newborn</button>
+      <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Populated by JS -->
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-prev" aria-label="Previous photo">&#8249;</button>
+    <button class="lb-next" aria-label="Next photo">&#8250;</button>
+    <div class="lb-img-wrap">
+      <img id="lbImg" src="" alt="">
+    </div>
+    <p id="lbCaption" class="lb-caption"></p>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-img-wrap">
+        <img src="instagram/photosbykgrace/portrait_08.jpg" alt="KGrace Photography" loading="lazy">
+      </div>
+      <div class="about-text">
+        <p class="eyebrow">About</p>
+        <h2>Hi, I'm Kacey.</h2>
+        <p>Based in San Antonio, Texas, I'm a photographer passionate about documenting life's most meaningful milestones — from the tender first days of newborns to the pride of graduation day.</p>
+        <p>My approach is relaxed and natural. I want you to feel like yourself in front of the camera, because the best photos happen when you forget it's even there.</p>
+        <p>Whether you're celebrating a new chapter or simply want to freeze a fleeting moment with the people you love most, I'm here for all of it.</p>
+        <a href="https://www.instagram.com/kaceykickhoefer" target="_blank" rel="noopener" class="btn btn-dark">Follow Along on Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="section-header light">
+      <p class="eyebrow">What I Offer</p>
+      <h2>Sessions &amp; Specialties</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-img" style="background-image: url('instagram/photosbykgrace/graduation_05.jpg')"></div>
+        <div class="service-body">
+          <h3>Graduation</h3>
+          <p>Celebrate your achievement with portraits that honor the milestone. On campus, off campus — your story, your way.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img" style="background-image: url('instagram/photosbykgrace/portrait_07.jpg')"></div>
+        <div class="service-body">
+          <h3>Portraits</h3>
+          <p>Headshots, personal branding, or just a beautiful set of photos — individual portraits that bring out your best self.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img" style="background-image: url('instagram/photosbykgrace/family_03.jpg')"></div>
+        <div class="service-body">
+          <h3>Family</h3>
+          <p>Candid, joyful, and full of life. Family sessions designed to capture the real moments — not just the posed ones.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img" style="background-image: url('instagram/photosbykgrace/maternity_04.jpg')"></div>
+        <div class="service-body">
+          <h3>Maternity</h3>
+          <p>Golden hour fields, intimate studio sessions — let's document this incredible season of your life beautifully.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img" style="background-image: url('instagram/photosbykgrace/newborn-baby_5.jpg')"></div>
+        <div class="service-body">
+          <h3>Newborn &amp; Baby</h3>
+          <p>They grow so fast. Let's freeze these tiny, fleeting moments before they slip away forever.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img" style="background-image: url('instagram/photosbykgrace/children-kids_12.jpg')"></div>
+        <div class="service-body">
+          <h3>Children &amp; Kids</h3>
+          <p>Sports, milestones, or just being kids — authentic, energetic sessions that match their personality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <p class="eyebrow">Let's Connect</p>
+        <h2>Ready to book<br><em>your session?</em></h2>
+        <p>Based in San Antonio, TX &amp; available for sessions throughout the surrounding area. Reach out to check availability and get a custom quote.</p>
+        <div class="contact-links">
+          <a href="https://www.instagram.com/photosbykgrace" target="_blank" rel="noopener" class="contact-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            @photosbykgrace
+          </a>
+          <a href="https://www.instagram.com/kaceykickhoefer" target="_blank" rel="noopener" class="contact-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            @kaceykickhoefer
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="session">Session Type</label>
+          <select id="session" name="session">
+            <option value="">Select a session type</option>
+            <option>Graduation</option>
+            <option>Portraits</option>
+            <option>Family</option>
+            <option>Maternity</option>
+            <option>Newborn &amp; Baby</option>
+            <option>Children &amp; Kids</option>
+            <option>Lifestyle / Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me a little about what you have in mind..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-accent">Send Message</button>
+        <p class="form-note">* For the fastest response, DM on Instagram!</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-logo">KGrace Photography</p>
+      <p class="footer-location">San Antonio, TX &amp; Surrounding Areas</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/photosbykgrace" target="_blank" rel="noopener">@photosbykgrace</a>
+        <a href="https://www.instagram.com/kaceykickhoefer" target="_blank" rel="noopener">@kaceykickhoefer</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> KGrace Photography. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
