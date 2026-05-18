@@ -502,9 +502,9 @@ footer {
 .footer-links a { font-size: 0.82rem; color: var(--accent); transition: color 0.2s; }
 .footer-links a:hover { color: var(--white); }
 .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.25); margin-bottom: 8px; }
-.footer-credit { font-size: 0.75rem; color: rgba(255,255,255,0.25); margin-top: 6px; }
-.footer-credit a { color: rgba(255,255,255,0.6); text-decoration: none; font-weight: 600; transition: color 0.2s; }
-.footer-credit a:hover { color: var(--accent); }
+.footer-credit { font-size: 0.8rem; color: rgba(255,255,255,0.38); margin-top: 6px; }
+.footer-credit a { color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 600; transition: color 0.2s; }
+.footer-credit a:hover { color: #c9943a !important; }
 
 /* ── Section header helper ──────────────────── */
 .section-header { margin-bottom: 56px; }
