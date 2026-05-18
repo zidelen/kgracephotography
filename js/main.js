@@ -27,21 +27,23 @@ const photos = [
   { file: 'graduation_22.jpg', cat: 'graduation', desc: 'A graduate wearing a mortarboard and stethoscope poses against a colorful tiled studio backdrop.' },
   { file: 'graduation_23.jpg', cat: 'graduation', desc: 'A graduate poses on an urban street wearing a graduation stole and holding their diploma under colorful neon signs.' },
   { file: 'graduation_24.jpg', cat: 'graduation', desc: 'A high school graduate wearing a Class of 2026 sash poses for a portrait on an urban street with neon signs overhead.' },
+  { file: 'graduation_25.jpg', cat: 'graduation', desc: 'A smiling woman poses for a headshot against a colorful geometric background in a studio setting.' },
+  { file: 'graduation_26.jpg', cat: 'graduation', desc: 'A woman in graduation regalia poses outdoors under a UT Health San Antonio banner during golden hour.' },
+  { file: 'graduation_27.jpg', cat: 'graduation', desc: 'A young woman poses for a portrait outdoors in front of UT Health San Antonio banners.' },
+  { file: 'graduation_28.jpg', cat: 'graduation', desc: 'A young graduate wearing academic regalia and stethoscope poses outdoors on a university campus.' },
 
-  { file: 'portrait_01.jpg', cat: 'portrait', desc: 'A smiling woman poses for a headshot against a colorful geometric background in a studio setting.' },
-  { file: 'portrait_02.jpg', cat: 'portrait', desc: 'A woman in graduation regalia poses outdoors under a UT Health San Antonio banner during golden hour.' },
-  { file: 'portrait_03.jpg', cat: 'portrait', desc: 'A young woman poses for a portrait outdoors in front of UT Health San Antonio banners.' },
-  { file: 'portrait_04.jpg', cat: 'portrait', desc: 'A young graduate wearing academic regalia and stethoscope poses outdoors on a university campus.' },
-  { file: 'portrait_05.jpg', cat: 'portrait', desc: 'A woman poses with a large colorful flower bouquet against a white fabric backdrop in a studio setting.' },
-  { file: 'portrait_06.jpg', cat: 'portrait', desc: 'A woman in a white outfit posing on green tiled stairs with a relaxed, smiling expression.' },
-  { file: 'portrait_07.jpg', cat: 'portrait', desc: 'A young woman in a white dress posing on green tiled stairs in an indoor architectural setting.' },
-  { file: 'portrait_08.jpg', cat: 'portrait', desc: 'A woman in a flowing white dress poses on a green tile staircase in an indoor architectural setting.' },
-  { file: 'portrait_09.jpg', cat: 'portrait', desc: 'A smiling young woman in a white halter dress posed against a green tiled wall backdrop.' },
-  { file: 'portrait_10.jpg', cat: 'portrait', desc: 'A young woman in white casual clothing poses on green tiled stairs with a warm, natural smile.' },
-  { file: 'portrait_11.jpg', cat: 'portrait', desc: 'A woman poses on a city street under a vintage neon sign.' },
-  { file: 'portrait_12.jpg', cat: 'portrait', desc: 'A young woman posing under vintage neon signs on an urban street.' },
-  { file: 'portrait_13.jpg', cat: 'portrait', desc: 'A young woman wearing sunglasses and a graduation sash poses at a table with a beverage in an indoor setting.' },
-  { file: 'portrait_14.jpg', cat: 'portrait', desc: 'A woman poses on a city street beneath vintage neon signs in an urban outdoor setting.' },
+  { file: 'portrait_01.jpg', cat: 'portrait', desc: 'A woman in a white outfit posing on green tiled stairs with a relaxed, smiling expression.' },
+  { file: 'portrait_02.jpg', cat: 'portrait', desc: 'A young woman in a white dress posing on green tiled stairs in an indoor architectural setting.' },
+  { file: 'portrait_03.jpg', cat: 'portrait', desc: 'A woman in a flowing white dress poses on a green tile staircase in an indoor architectural setting.' },
+  { file: 'portrait_04.jpg', cat: 'portrait', desc: 'A smiling young woman in a white halter dress posed against a green tiled wall backdrop.' },
+  { file: 'portrait_05.jpg', cat: 'portrait', desc: 'A young woman in white casual clothing poses on green tiled stairs with a warm, natural smile.' },
+  { file: 'portrait_06.jpg', cat: 'portrait', desc: 'A woman poses on a city street under a vintage neon sign.' },
+  { file: 'portrait_07.jpg', cat: 'portrait', desc: 'A young woman posing under vintage neon signs on an urban street.' },
+  { file: 'portrait_08.jpg', cat: 'portrait', desc: 'A young woman wearing sunglasses and a graduation sash poses at a table with a beverage in an indoor setting.' },
+  { file: 'portrait_09.jpg', cat: 'portrait', desc: 'A woman poses on a city street beneath vintage neon signs in an urban outdoor setting.' },
+  { file: 'portrait_10.jpg', cat: 'portrait', desc: 'Three young women enjoying drinks and socializing at a casual bar or restaurant venue with neon signage and colorful tile walls.' },
+  { file: 'portrait_11.jpg', cat: 'portrait', desc: 'Three young women posing together under neon signs on an urban street.' },
+  { file: 'portrait_12.jpg', cat: 'portrait', desc: 'Three young women posing together under neon signage on an urban street.' },
 
   { file: 'family_01.jpg', cat: 'family', desc: 'A mother and young child share a tender moment in an open field during golden hour.' },
   { file: 'family_02.jpg', cat: 'family', featured: true, desc: 'A mother holding her young son in an outdoor field with trees in the background, captured in black and white.' },
@@ -49,7 +51,7 @@ const photos = [
   { file: 'family_04.jpg', cat: 'family', desc: 'A family of four enjoying playtime together in a home interior space during construction.' },
   { file: 'family_05.jpg', cat: 'family', desc: 'A happy family of four poses together indoors in a studio setting.' },
   { file: 'family_06.jpg', cat: 'family', desc: 'A mother joyfully holds and interacts with her infant in a brightly lit indoor space.' },
-  { file: 'family_07.jpg', cat: 'family', desc: 'A woman and man playfully interact with two young children inside an unfinished house.' },
+  { file: 'family_07.jpg', cat: 'family', desc: 'A woman and man playfully interact with two young children inside an unfinished house under construction.' },
   { file: 'family_08.jpg', cat: 'family', desc: 'A candid family moment showing parents and a young child together in an indoor home setting.' },
   { file: 'family_09.jpg', cat: 'family', desc: 'A family of four plays together in an unfinished indoor space, with two young children engaging with their parents.' },
   { file: 'family_10.jpg', cat: 'family', desc: 'A family of four enjoys time together outside their new construction home on a sunny day.' },
@@ -71,6 +73,7 @@ const photos = [
   { file: 'maternity_12.jpg', cat: 'maternity', desc: 'A pregnant woman and her partner pose together in a studio setting with a floral bouquet.' },
   { file: 'maternity_13.jpg', cat: 'maternity', desc: 'A pregnant woman in profile holding a bouquet of flowers against a white studio backdrop.' },
   { file: 'maternity_14.jpg', cat: 'maternity', featured: true, desc: 'A pregnant woman poses with her toddler and shadow in a studio setting with dramatic lighting.' },
+  { file: 'maternity_15.jpg', cat: 'maternity', desc: 'A woman poses with a large colorful flower bouquet against a white fabric backdrop in a studio setting.' },
 
   { file: 'children-kids_01.jpg', cat: 'children-kids', featured: true, desc: 'A delighted toddler wearing a festive Santa hat poses with holiday lights in a cheerful seasonal portrait.' },
   { file: 'children-kids_02.jpg', cat: 'children-kids', desc: 'Two young toddlers sitting on a concrete floor sharing pizza in an unfinished indoor space.' },
@@ -84,20 +87,15 @@ const photos = [
   { file: 'children-kids_10.jpg', cat: 'children-kids', desc: 'Two young children sitting on a blanket outdoors on grass, enjoying snacks during a casual outdoor gathering.' },
   { file: 'children-kids_11.jpg', cat: 'children-kids', desc: 'Young softball player in batting stance at home plate during a game with teammates in the field.' },
   { file: 'children-kids_12.jpg', cat: 'children-kids', desc: 'A young baseball player in full uniform poses on a baseball field with a bat and helmet.' },
-
-  { file: 'newborn-baby_1.jpg', cat: 'newborn-baby', desc: 'A delighted baby dressed in a festive Santa hat poses with Christmas lights and tree decorations.' },
-  { file: 'newborn-baby_2.jpg', cat: 'newborn-baby', desc: 'A delighted infant wearing a Santa hat surrounded by Christmas lights and holiday décor.' },
-  { file: 'newborn-baby_3.jpg', cat: 'newborn-baby', desc: "A baby's hand reaching toward evergreen branches and warm holiday lights in a festive, cozy setting." },
-  { file: 'newborn-baby_4.jpg', cat: 'newborn-baby', desc: 'A smiling baby wearing a Santa hat posed with Christmas decorations and lights in a studio setting.' },
-  { file: 'newborn-baby_5.jpg', cat: 'newborn-baby', desc: 'A delighted baby wearing a festive Santa hat posed on white fur with holiday lights and decorations in the background.' },
-  { file: 'newborn-baby_6.jpg', cat: 'newborn-baby', desc: 'A smiling baby with white fluffy hair playing with holiday ornaments and lights indoors.' },
-  { file: 'newborn-baby_7.jpg', cat: 'newborn-baby', desc: 'A smiling baby dressed in a festive Santa hat and red outfit surrounded by holiday decorations and lights.' },
-  { file: 'newborn-baby_8.jpg', cat: 'newborn-baby', desc: 'A baby wearing a Santa hat plays with holiday lights on a white fluffy surface in a controlled studio setting.' },
-  { file: 'newborn-baby_9.jpg', cat: 'newborn-baby', desc: 'A happy baby wearing a white fuzzy Santa hat posed with holiday decorations and twinkling lights in the background.' },
-
-  { file: 'lifestyle_1.jpg', cat: 'lifestyle', desc: 'Three young women enjoying drinks and socializing at a casual bar or restaurant venue with neon signage and colorful tile walls.' },
-  { file: 'lifestyle_2.jpg', cat: 'lifestyle', desc: 'Three young women posing together under neon signs on an urban street.' },
-  { file: 'lifestyle_3.jpg', cat: 'lifestyle', desc: 'Three young women posing together under neon signage on an urban street.' },
+  { file: 'children-kids_13.jpg', cat: 'children-kids', desc: 'A delighted baby dressed in a festive Santa hat poses with Christmas lights and tree decorations.' },
+  { file: 'children-kids_14.jpg', cat: 'children-kids', desc: 'A delighted infant wearing a Santa hat surrounded by Christmas lights and holiday decor.' },
+  { file: 'children-kids_15.jpg', cat: 'children-kids', desc: "A baby's hand reaching toward evergreen branches and warm holiday lights in a festive, cozy setting." },
+  { file: 'children-kids_16.jpg', cat: 'children-kids', desc: 'A smiling baby wearing a Santa hat posed with Christmas decorations and lights in a studio setting.' },
+  { file: 'children-kids_17.jpg', cat: 'children-kids', desc: 'A delighted baby wearing a festive Santa hat posed on white fur with holiday lights and decorations in the background.' },
+  { file: 'children-kids_18.jpg', cat: 'children-kids', desc: 'A smiling baby with white fluffy hair playing with holiday ornaments and lights indoors.' },
+  { file: 'children-kids_19.jpg', cat: 'children-kids', desc: 'A smiling baby dressed in a festive Santa hat and red outfit surrounded by holiday decorations and lights.' },
+  { file: 'children-kids_20.jpg', cat: 'children-kids', desc: 'A baby wearing a Santa hat plays with holiday lights on a white fluffy surface in a studio setting.' },
+  { file: 'children-kids_21.jpg', cat: 'children-kids', desc: 'A happy baby wearing a white fuzzy Santa hat posed with holiday decorations and twinkling lights in the background.' },
 ];
 
 /* ── Gallery ──────────────────────────────── */
@@ -144,10 +142,8 @@ function applyFilter(filter) {
     const match = filter === 'all' || item.dataset.cat === filter;
     let visible;
     if (limited && filter === 'all') {
-      // Home page "All" tab: show only the 4 hand-picked featured photos
       visible = item.dataset.featured === 'true';
     } else {
-      // Category tabs: first 4 (or unlimited on portfolio page)
       visible = match && shown < photoLimit;
     }
     item.classList.toggle('hidden', !visible);
