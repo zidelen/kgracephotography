@@ -501,7 +501,10 @@ footer {
 .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 24px; }
 .footer-links a { font-size: 0.82rem; color: var(--accent); transition: color 0.2s; }
 .footer-links a:hover { color: var(--white); }
-.footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.25); }
+.footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.25); margin-bottom: 8px; }
+.footer-credit { font-size: 0.75rem; color: rgba(255,255,255,0.25); margin-top: 6px; }
+.footer-credit a { color: rgba(255,255,255,0.6); text-decoration: none; font-weight: 600; transition: color 0.2s; }
+.footer-credit a:hover { color: var(--accent); }
 
 /* ── Section header helper ──────────────────── */
 .section-header { margin-bottom: 56px; }
