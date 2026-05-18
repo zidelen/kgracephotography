@@ -11,7 +11,7 @@ const photos = [
   { file: 'graduation_06.jpg', cat: 'graduation', desc: 'A graduate in cap and gown poses with a statue at an outdoor campus location.' },
   { file: 'graduation_07.jpg', cat: 'graduation', desc: 'A graduate wearing a white dress and university stole poses outdoors against a backdrop of ivy and grass.' },
   { file: 'graduation_08.jpg', cat: 'graduation', desc: 'A graduate wearing a college honor sash and holding a diploma cap while posing on outdoor steps.' },
-  { file: 'graduation_09.jpg', cat: 'graduation', desc: 'A graduate wearing a Texas State Class of 2025 sash and white dress poses outdoors in front of a brick building archway.' },
+  { file: 'graduation_09.jpg', cat: 'graduation', featured: true, desc: 'A graduate wearing a Texas State Class of 2025 sash and white dress poses outdoors in front of a brick building archway.' },
   { file: 'graduation_10.jpg', cat: 'graduation', desc: 'A graduate poses outdoors in cap and gown while holding her diploma in a landscaped garden setting.' },
   { file: 'graduation_11.jpg', cat: 'graduation', desc: 'A young woman wearing a graduation stole poses for a portrait outdoors in natural sunlight.' },
   { file: 'graduation_12.jpg', cat: 'graduation', desc: 'A young woman wearing a graduation stole poses for a portrait outdoors in a campus setting.' },
@@ -44,7 +44,7 @@ const photos = [
   { file: 'portrait_14.jpg', cat: 'portrait', desc: 'A woman poses on a city street beneath vintage neon signs in an urban outdoor setting.' },
 
   { file: 'family_01.jpg', cat: 'family', desc: 'A mother and young child share a tender moment in an open field during golden hour.' },
-  { file: 'family_02.jpg', cat: 'family', desc: 'A mother holding her young son in an outdoor field with trees in the background, captured in black and white.' },
+  { file: 'family_02.jpg', cat: 'family', featured: true, desc: 'A mother holding her young son in an outdoor field with trees in the background, captured in black and white.' },
   { file: 'family_03.jpg', cat: 'family', desc: 'A mother holding her young son in an open field during golden hour with trees in the background.' },
   { file: 'family_04.jpg', cat: 'family', desc: 'A family of four enjoying playtime together in a home interior space during construction.' },
   { file: 'family_05.jpg', cat: 'family', desc: 'A happy family of four poses together indoors in a studio setting.' },
@@ -70,9 +70,9 @@ const photos = [
   { file: 'maternity_11.jpg', cat: 'maternity', desc: 'A pregnant woman holding her toddler against her belly in a studio setting with a white backdrop.' },
   { file: 'maternity_12.jpg', cat: 'maternity', desc: 'A pregnant woman and her partner pose together in a studio setting with a floral bouquet.' },
   { file: 'maternity_13.jpg', cat: 'maternity', desc: 'A pregnant woman in profile holding a bouquet of flowers against a white studio backdrop.' },
-  { file: 'maternity_14.jpg', cat: 'maternity', desc: 'A pregnant woman poses with her toddler and shadow in a studio setting with dramatic lighting.' },
+  { file: 'maternity_14.jpg', cat: 'maternity', featured: true, desc: 'A pregnant woman poses with her toddler and shadow in a studio setting with dramatic lighting.' },
 
-  { file: 'children-kids_01.jpg', cat: 'children-kids', desc: 'A delighted toddler wearing a festive Santa hat poses with holiday lights in a cheerful seasonal portrait.' },
+  { file: 'children-kids_01.jpg', cat: 'children-kids', featured: true, desc: 'A delighted toddler wearing a festive Santa hat poses with holiday lights in a cheerful seasonal portrait.' },
   { file: 'children-kids_02.jpg', cat: 'children-kids', desc: 'Two young toddlers sitting on a concrete floor sharing pizza in an unfinished indoor space.' },
   { file: 'children-kids_03.jpg', cat: 'children-kids', desc: 'A young child peeking playfully around a doorframe with a rural landscape visible in the background.' },
   { file: 'children-kids_04.jpg', cat: 'children-kids', desc: 'A cheerful toddler in a white shirt smiling and playing on a concrete floor in natural sunlight.' },
@@ -126,6 +126,7 @@ function buildGallery() {
     const overlay = document.createElement('div');
     overlay.className = 'gallery-item-overlay';
 
+    if (photo.featured) item.dataset.featured = 'true';
     item.append(img, overlay);
     item.addEventListener('click', () => openLightbox(i));
     grid.appendChild(item);
@@ -137,11 +138,18 @@ function applyFilter(filter) {
   const items = grid.querySelectorAll('.gallery-item');
   visiblePhotos = [];
   let shown = 0;
+  const limited = photoLimit < Infinity;
 
   items.forEach(item => {
     const match = filter === 'all' || item.dataset.cat === filter;
-    const withinLimit = shown < photoLimit;
-    const visible = match && withinLimit;
+    let visible;
+    if (limited && filter === 'all') {
+      // Home page "All" tab: show only the 4 hand-picked featured photos
+      visible = item.dataset.featured === 'true';
+    } else {
+      // Category tabs: first 4 (or unlimited on portfolio page)
+      visible = match && shown < photoLimit;
+    }
     item.classList.toggle('hidden', !visible);
     if (visible) {
       visiblePhotos.push(parseInt(item.dataset.index));
